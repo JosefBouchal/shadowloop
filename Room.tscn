@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bim3ao1k8cawr"]
+
+[sub_resource type="Gradient" id="Gradient_musdo"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_gw2vq"]
+gradient = SubResource("Gradient_musdo")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ruuo"]
+size = Vector2(1015, 530)
+
+[node name="Room" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(578, 323.5)
+scale = Vector2(4.49219, 653)
+texture = SubResource("GradientTexture1D_gw2vq")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(573.5, 321)
+shape = SubResource("RectangleShape2D_5ruuo")
+disabled = true
+
+[node name="Obstacles" type="Node2D" parent="."]

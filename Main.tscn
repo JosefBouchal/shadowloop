@@ -1,0 +1,18 @@
+[gd_scene load_steps=6 format=3 uid="uid://tl2tr23gv541"]
+
+[ext_resource type="PackedScene" uid="uid://3aipkbpjjvin" path="res://Player.tscn" id="1_glv2v"]
+[ext_resource type="PackedScene" uid="uid://doo2yterouomw" path="res://Enemy.tscn" id="2_uu6xs"]
+[ext_resource type="Script" uid="uid://bu2lgl5tk60u8" path="res://LevelManager.gd" id="3_r0du0"]
+[ext_resource type="PackedScene" uid="uid://bim3ao1k8cawr" path="res://Room.tscn" id="4_cm0pq"]
+[ext_resource type="PackedScene" uid="uid://c3fhcdj3mv6hi" path="res://Obstacle.tscn" id="5_fos0i"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_glv2v")]
+position = Vector2(100, 556)
+
+[node name="LevelManager" type="Node2D" parent="."]
+script = ExtResource("3_r0du0")
+room_scene = ExtResource("4_cm0pq")
+enemy_scene = ExtResource("2_uu6xs")
+obstacle_scene = ExtResource("5_fos0i")
